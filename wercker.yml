@@ -19,8 +19,8 @@ push-release:
     - internal/docker-push:
         username: $DOCKER_USERNAME
         password: $DOCKER_PASSWORD
-        repository: phx.ocir.io/cloud_pursuit_appdev/eshneken/twitter-feed
-        registry: https://phx.oci.io/v2
+        repository: $DOCKER_REPO
+        registry: $DOCKER_REGISTRY
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
         working-dir: /pipeline/source
         ports: $PORT
